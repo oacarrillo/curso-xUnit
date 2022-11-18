@@ -1,5 +1,3 @@
-using System.Net.NetworkInformation;
-
 namespace TDDExample
 {
     public class StringCalculatorShould
@@ -13,7 +11,7 @@ namespace TDDExample
         }
 
         [Fact]
-        public void ReturnNumberWhenReceiv4esThatNumbers()
+        public void ReturnNumberWhenReceivesThatNumber() 
         {
             var calculator = new StringCalculator();
             var result = calculator.Add("1");
@@ -27,15 +25,5 @@ namespace TDDExample
             var result = calculator.Add("1,2");
             Assert.Equal(3, result);
         }
-
-        //CASO PRACTICO PARA CLASE
-        [Fact]
-        public void ReturnSumWhenReceiveAnyAmountOfNumbers()
-        {
-            var calculator = new StringCalculator();
-            var result = calculator.Add("1,2,3,4");
-            Assert.Equal(10, result);
-        }
-
     }
 }
