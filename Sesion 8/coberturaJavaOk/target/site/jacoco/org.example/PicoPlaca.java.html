@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PicoPlaca.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">covertura</a> &gt; <a href="index.source.html" class="el_package">org.example</a> &gt; <span class="el_source">PicoPlaca.java</span></div><h1>PicoPlaca.java</h1><pre class="source lang-java linenums">package org.example;
+
+import static java.lang.Integer.parseInt;
+
+<span class="fc" id="L5">public class PicoPlaca {</span>
+
+    public boolean tienePicoPlaca(String ciudad, String dia, String placa) {
+<span class="fc" id="L8">        boolean resultado = false;</span>
+<span class="fc" id="L9">        ciudad = ciudad.toUpperCase();</span>
+<span class="fc" id="L10">        dia = dia.toUpperCase();</span>
+<span class="fc" id="L11">        placa = placa.toUpperCase();</span>
+
+<span class="pc bpc" id="L13" title="1 of 4 branches missed.">        if (placa == null || placa.length() == 0) {</span>
+<span class="fc" id="L14">            throw new IllegalArgumentException(&quot;&quot;);</span>
+        }
+<span class="fc" id="L16">        int ultimoDigito = Integer.parseInt(String.valueOf(placa.charAt(5)));//Ultimo digito de la placa</span>
+<span class="pc bpc" id="L17" title="1 of 2 branches missed.">        if (ciudad.equals(&quot;BOGOTA&quot;)) {</span>
+<span class="pc bpc" id="L18" title="6 of 7 branches missed.">            switch (dia) {</span>
+                case &quot;LUNES&quot;:
+<span class="pc bpc" id="L20" title="1 of 4 branches missed.">                    resultado = ultimoDigito == 3 || ultimoDigito == 4;</span>
+<span class="fc" id="L21">                    break;</span>
+                case &quot;MARTES&quot;:
+<span class="nc bnc" id="L23" title="All 4 branches missed.">                    resultado = ultimoDigito == 5 || ultimoDigito == 6;</span>
+<span class="nc" id="L24">                    break;</span>
+                case &quot;MIERCOLES&quot;:
+<span class="nc bnc" id="L26" title="All 4 branches missed.">                    resultado = ultimoDigito == 7 || ultimoDigito == 8;</span>
+<span class="nc" id="L27">                    break;</span>
+                case &quot;JUEVES&quot;:
+<span class="nc bnc" id="L29" title="All 4 branches missed.">                    resultado = ultimoDigito == 9 || ultimoDigito == 0;</span>
+<span class="nc" id="L30">                    break;</span>
+                case &quot;VIERNES&quot;:
+<span class="nc bnc" id="L32" title="All 4 branches missed.">                    resultado = ultimoDigito == 1 || ultimoDigito == 2;</span>
+<span class="nc" id="L33">                    break;</span>
+                case &quot;SABADO&quot;:
+<span class="nc" id="L35">                    break;</span>
+                case &quot;DOMINGO&quot;:
+                    break;
+
+            }
+        }
+<span class="fc" id="L41">        return resultado;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
