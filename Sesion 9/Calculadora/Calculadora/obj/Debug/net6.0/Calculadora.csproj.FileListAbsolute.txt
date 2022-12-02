@@ -1,0 +1,24 @@
+C:\Users\Juanjo\source\repos\Calculadora\Calculadora\bin\Debug\net6.0\Calculadora.deps.json
+C:\Users\Juanjo\source\repos\Calculadora\Calculadora\bin\Debug\net6.0\Calculadora.dll
+C:\Users\Juanjo\source\repos\Calculadora\Calculadora\bin\Debug\net6.0\Calculadora.pdb
+C:\Users\Juanjo\source\repos\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.csproj.AssemblyReference.cache
+C:\Users\Juanjo\source\repos\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Juanjo\source\repos\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.AssemblyInfoInputs.cache
+C:\Users\Juanjo\source\repos\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.AssemblyInfo.cs
+C:\Users\Juanjo\source\repos\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\Juanjo\source\repos\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.dll
+C:\Users\Juanjo\source\repos\Calculadora\Calculadora\obj\Debug\net6.0\refint\Calculadora.dll
+C:\Users\Juanjo\source\repos\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.pdb
+C:\Users\Juanjo\source\repos\Calculadora\Calculadora\obj\Debug\net6.0\ref\Calculadora.dll
+C:\Test\sesion 9\Calculadora\Calculadora\bin\Debug\net6.0\Calculadora.deps.json
+C:\Test\sesion 9\Calculadora\Calculadora\bin\Debug\net6.0\Calculadora.dll
+C:\Test\sesion 9\Calculadora\Calculadora\bin\Debug\net6.0\Calculadora.pdb
+C:\Test\sesion 9\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.csproj.AssemblyReference.cache
+C:\Test\sesion 9\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Test\sesion 9\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.AssemblyInfoInputs.cache
+C:\Test\sesion 9\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.AssemblyInfo.cs
+C:\Test\sesion 9\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.csproj.CoreCompileInputs.cache
+C:\Test\sesion 9\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.dll
+C:\Test\sesion 9\Calculadora\Calculadora\obj\Debug\net6.0\refint\Calculadora.dll
+C:\Test\sesion 9\Calculadora\Calculadora\obj\Debug\net6.0\Calculadora.pdb
+C:\Test\sesion 9\Calculadora\Calculadora\obj\Debug\net6.0\ref\Calculadora.dll
