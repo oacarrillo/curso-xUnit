@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="6594b176-2a1a-4414-90ff-08c044b00934" activeEnvironment="Default" name="calculator" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="44d495ca-0629-4e03-9b0a-9c8f3fa14165" wsaVersion="NONE" name="CalculatorSoap" type="wsdl" bindingName="{http://tempuri.org/}CalculatorSoap" soapVersion="1_1" anonymous="optional" definition="http://www.dneonline.com/calculator.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.dneonline.com/calculator.asmx?WSDL"><con:part><con:url>http://www.dneonline.com/calculator.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Add">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intA" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="intB" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddResult" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subtract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intA" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="intB" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubtractResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubtractResult" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Multiply">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intA" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="intB" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultiplyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MultiplyResult" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Divide">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intA" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="intB" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DivideResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DivideResult" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddSoapIn">
+    <wsdl:part name="parameters" element="tns:Add"/>
+  </wsdl:message>
+  <wsdl:message name="AddSoapOut">
+    <wsdl:part name="parameters" element="tns:AddResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SubtractSoapIn">
+    <wsdl:part name="parameters" element="tns:Subtract"/>
+  </wsdl:message>
+  <wsdl:message name="SubtractSoapOut">
+    <wsdl:part name="parameters" element="tns:SubtractResponse"/>
+  </wsdl:message>
+  <wsdl:message name="MultiplySoapIn">
+    <wsdl:part name="parameters" element="tns:Multiply"/>
+  </wsdl:message>
+  <wsdl:message name="MultiplySoapOut">
+    <wsdl:part name="parameters" element="tns:MultiplyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="DivideSoapIn">
+    <wsdl:part name="parameters" element="tns:Divide"/>
+  </wsdl:message>
+  <wsdl:message name="DivideSoapOut">
+    <wsdl:part name="parameters" element="tns:DivideResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="CalculatorSoap">
+    <wsdl:operation name="Add">
+      <wsdl:documentation>Adds two integers. This is a test WebService. ©DNE Online</wsdl:documentation>
+      <wsdl:input message="tns:AddSoapIn"/>
+      <wsdl:output message="tns:AddSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Subtract">
+      <wsdl:input message="tns:SubtractSoapIn"/>
+      <wsdl:output message="tns:SubtractSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+      <wsdl:input message="tns:MultiplySoapIn"/>
+      <wsdl:output message="tns:MultiplySoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Divide">
+      <wsdl:input message="tns:DivideSoapIn"/>
+      <wsdl:output message="tns:DivideSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalculatorSoap" type="tns:CalculatorSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/Add" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Subtract">
+      <soap:operation soapAction="http://tempuri.org/Subtract" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+      <soap:operation soapAction="http://tempuri.org/Multiply" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Divide">
+      <soap:operation soapAction="http://tempuri.org/Divide" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CalculatorSoap12" type="tns:CalculatorSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Add">
+      <soap12:operation soapAction="http://tempuri.org/Add" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Subtract">
+      <soap12:operation soapAction="http://tempuri.org/Subtract" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+      <soap12:operation soapAction="http://tempuri.org/Multiply" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Divide">
+      <soap12:operation soapAction="http://tempuri.org/Divide" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Calculator">
+    <wsdl:port name="CalculatorSoap" binding="tns:CalculatorSoap">
+      <soap:address location="http://www.dneonline.com/calculator.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="CalculatorSoap12" binding="tns:CalculatorSoap12">
+      <soap12:address location="http://www.dneonline.com/calculator.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.dneonline.com/calculator.asmx</con:endpoint></con:endpoints><con:operation id="9c5e17ff-5b7f-4c00-8cbd-ae8837cc407f" isOneWay="false" action="http://tempuri.org/Add" name="Add" bindingOperationName="Add" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dd2a522c-4817-455d-bb8d-ce8a934f352e" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.dneonline.com/calculator.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Add>\r
+         <tem:intA>2</tem:intA>\r
+         <tem:intB>4</tem:intB>\r
+      </tem:Add>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Add"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="f1da491f-620e-49a1-8f74-2938ba972823" isOneWay="false" action="http://tempuri.org/Divide" name="Divide" bindingOperationName="Divide" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bd4501f2-20ee-4397-9155-0fcbb5137e5a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.dneonline.com/calculator.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Divide>\r
+         <tem:intA>?</tem:intA>\r
+         <tem:intB>?</tem:intB>\r
+      </tem:Divide>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Divide"/></con:call></con:operation><con:operation id="d1de105f-20db-43e0-8dde-b4562baaec55" isOneWay="false" action="http://tempuri.org/Multiply" name="Multiply" bindingOperationName="Multiply" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="30da99b7-74d3-4ab5-b05c-22f6777d5d2e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.dneonline.com/calculator.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Multiply>\r
+         <tem:intA>?</tem:intA>\r
+         <tem:intB>?</tem:intB>\r
+      </tem:Multiply>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Multiply"/></con:call></con:operation><con:operation id="0c59c9ba-95f5-4931-920a-92376e4bed22" isOneWay="false" action="http://tempuri.org/Subtract" name="Subtract" bindingOperationName="Subtract" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a1d10b70-64e6-43af-8760-192c8cc96fca" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.dneonline.com/calculator.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Subtract>\r
+         <tem:intA>?</tem:intA>\r
+         <tem:intB>?</tem:intB>\r
+      </tem:Subtract>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Subtract"/></con:call></con:operation></con:interface><con:testSuite id="a394e8e9-c78a-4a9e-8a56-de2f0bfe2f6c" name="CalculatorSoap TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ee7b571f-d819-466b-a3c7-54b0ce637ebe" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Add TestCase" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Var_Iniciales" id="8b344d8c-0811-4e5a-9b16-4486c49596ca"><con:settings/><con:config><script>import com.eviware.soapui.support.XmlHolder
+def myTestCase = context.testCase //myTestCase contains the test case
+propTestStep = myTestCase.getTestStepByName("inputData") // get the Property TestStep object
+propTestStepOut = myTestCase.getTestStepByName("outputData") // get the Property TestStep object
+
+
+ propTestStep.setPropertyValue("Total", "0");
+ propTestStep.setPropertyValue("Count", "1");
+ propTestStep.setPropertyValue("Next", "0");
+ propTestStep.setPropertyValue("StopVal", "0");
+ propTestStep.setPropertyValue("Escribir", "crear");
+ propTestStep.setPropertyValue("fileName", "");</script></con:config></con:testStep><con:testStep type="groovy" name="Datos" id="8ed95f31-dbe8-4416-9c0b-003a48f014f9"><con:settings/><con:config><script>import com.eviware.soapui.support.XmlHolder
+import jxl.*
+import jxl.write.*
+
+def myTestCase = context.testCase //myTestCase contains the test case
+def counter,next,previous,size //Variables used to handle the loop and to move inside the file
+//RUTA ORIGEN EXCEL
+Workbook workbook1 = Workbook.getWorkbook(new File("C:\\Test\\sesion 10\\Automatizacion.xls"))
+
+//HOJA ORIGEN EXCEL
+Sheet sheet1 = workbook1.getSheet(0)
+
+//OBTIENE EL NUMERO DE LINEAS
+size= sheet1.getRows().toInteger() 
+
+//OBTIENE EL NUMERO DE COLUMNAS
+columnas = sheet1.getColumns().toInteger()
+
+rowcount=sheet1.getRows();
+colcount=sheet1.getColumns();
+
+//VACIANDO LAS VARIABLES
+
+//ASIGNA EL INPUT A VARIABLES
+propTestStep = myTestCase.getTestStepByName("inputData") 
+propTestStepOutput = myTestCase.getTestStepByName("outputData")
+propTestStepcontextVariables = myTestCase.getTestStepByName("contextVariables") 
+propTestStep.setPropertyValue("Total", size.toString())
+counter = propTestStep.getPropertyValue("Count").toString() //counter variable contains iteration number
+
+//LIMPIA VALOR DE LAS VARIABLES 
+propTestStep.setPropertyValue("a", "");
+propTestStep.setPropertyValue("b", "");
+
+//log.info(counter)+"hola"
+counter = counter.toInteger()
+	
+next = (counter > size-2? 1: counter+1) //set the next value
+
+//LEE CAMPOS DE EXCEL Y LOS ALAMACENA  
+Cell f1=sheet1.getCell(0,counter) // getCell(column,row) 
+Cell f2=sheet1.getCell(1,counter) // getCell(column,row) 
+
+workbook1.close() //close the file
+
+//ASIGNA VALORES DE EXCEL A VARIABLES DE TRABAJO
+campo1=f1.getContents()// getCell(column,row)  
+campo2=f2.getContents()// getCell(column,row)  
+
+//ASIGNA EL VALOR DE ARCHIVO DE INSUMO AL INPUTDATA Y VARIABLE DE CONTEXTO
+propTestStep.setPropertyValue("a", campo1);
+propTestStep.setPropertyValue("b", campo2);
+
+propTestStep.setPropertyValue("Count", next.toString()) //increase Count value
+
+next++ //increase next value
+
+propTestStep.setPropertyValue("Next", next.toString()) //set Next value on the properties step
+
+//Decide if the test has to be run again or not
+
+if (counter == size-1)
+{
+	propTestStep.setPropertyValue("StopVal", "T")
+	log.info "Setting the StopVal property now..."	
+}</script></con:config></con:testStep><con:testStep type="properties" name="inputData" id="9bd4e680-8896-4151-8c89-d1203e71fcfc"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>a</con:name><con:value>2</con:value></con:property><con:property><con:name>b</con:name><con:value>1</con:value></con:property><con:property><con:name>Total</con:name><con:value>0</con:value></con:property><con:property><con:name>Count</con:name><con:value>1</con:value></con:property><con:property><con:name>Next</con:name><con:value>0</con:value></con:property><con:property><con:name>StopVal</con:name><con:value>0</con:value></con:property><con:property><con:name>Escribir</con:name><con:value>crear</con:value></con:property><con:property><con:name>fileName</con:name><con:value>Suma_2022-12-02 13-30-11.txt</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="properties" name="outputData" id="87abb431-849a-4057-9745-a838e76c6033"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>valor</con:name><con:value>3</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="1c40e427-cb34-415b-a597-f4dcbed2f784" name="Add"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CalculatorSoap</con:interface><con:operation>Add</con:operation><con:request name="Add" id="b5dbaf72-4e2c-4ede-a7d4-c0e6e8fdce29"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.dneonline.com/calculator.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Add>\r
+         <tem:intA>${inputData#a}</tem:intA>\r
+         <tem:intB>${inputData#b}</tem:intB>\r
+      </tem:Add>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="GroovyScriptAssertion" id="3cb02a92-e8bd-484d-aa87-162b120d8a1e" name="Script Assertion"><con:configuration><scriptText>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+def requestHolder = groovyUtils.getXmlHolder( messageExchange.requestContent )
+def responseHolder = groovyUtils.getXmlHolder( messageExchange.responseContent )
+responseHolder.namespaces["ns"] = "http://tempuri.org/"
+def valor = responseHolder.getNodeValue("//ns:AddResult")
+context.testCase.testSteps["outputData"].setPropertyValue("valor",valor)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://tempuri.org/Add" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Escribir" id="1ffa7f7f-e965-413a-afbc-8a9587e9e980"><con:settings/><con:config><script>// Defining a file handler/pointer to handle the file.
+
+def myTestCase = context.testCase //myTestCase contains the test case
+def counter,total, band_nfile
+def resultado
+def nomServicio= "${context.testCase.name}"
+propTestStepContext = myTestCase.getTestStepByName("contextVariables") // get the Property TestStep object
+propTestStep = myTestCase.getTestStepByName("inputData") // get the Property TestStep object
+propTestStepOutPutData = myTestCase.getTestStepByName("outputData") // get the Property TestStep object
+
+band_nfile = propTestStep.getPropertyValue("Escribir").toString()
+
+def fileName = propTestStep.getPropertyValue("fileName").toString()
+
+if(band_nfile == "crear")
+{
+    def fecha = new Date()
+    def fecha2=fecha.format("yyyy-MM-dd HH-mm-ss")
+    fileName = "Suma" + "_" +fecha2+".txt"
+    propTestStep.setPropertyValue("fileName", fileName);
+    propTestStep.setPropertyValue("Escribir", "noCrear");
+}
+
+def inputFile = new File("C:\\Test\\sesion 10\\"+fileName)
+
+counter = propTestStep.getPropertyValue("Count").toString() //counter variable contains iteration number
+total = propTestStep.getPropertyValue("Total").toString() //counter variable contains iteration number
+StopVal1= propTestStep.getPropertyValue("StopVal").toString()
+String str = "2"
+
+//VALIDACION PRUEBA
+if(propTestStepOutPutData.getPropertyValue("valor").toString()!="") 
+{
+    resultado = "Exitoso"
+}
+else
+{
+    resultado = "Fallido"    
+}
+
+// Check if a file with same name exisits in the folder.
+
+if(StopVal1 != "T")
+{
+    inputFile.append("Parametro 1 = " + propTestStep.getPropertyValue("a").toString()+","
+    +"Parametro 2 = " + propTestStep.getPropertyValue("b").toString()+","
+    +"Valor = " + propTestStepOutPutData.getPropertyValue("valor").toString()+","
+    +"resultadoPrueba" + "|" + resultado
+    +"\n"
+    )
+}
+else
+{
+    inputFile.append(" Parametro 1 = " + propTestStep.getPropertyValue("a").toString()+","
+    +" Parametro 2 = " + propTestStep.getPropertyValue("b").toString()+","
+    +" Valor = " + propTestStepOutPutData.getPropertyValue("valor").toString()+","
+    + " ResultadoPrueba = " + resultado
+    +"\n"
+    )
+}
+
+if(StopVal1 == "T")
+{
+    log.info("Process Terminated")
+    propTestStep.setPropertyValue("Total", "0");
+    propTestStep.setPropertyValue("Count", "1");
+    propTestStep.setPropertyValue("Next", "0");
+    propTestStep.setPropertyValue("StopVal", "0");
+    propTestStep.setPropertyValue("Escribir", "crear");
+        
+}else
+{
+   testRunner.gotoStepByName( "Datos")
+}</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="774fda1c-02db-4a08-9683-5038dc911144" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Divide TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="bfd733c9-fb39-471a-9acb-ecd7e0492620" name="Divide"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CalculatorSoap</con:interface><con:operation>Divide</con:operation><con:request name="Divide" id="6125251a-4ec2-437b-9d0f-7ec6f3bb25c7"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.dneonline.com/calculator.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Divide>\r
+         <tem:intA>?</tem:intA>\r
+         <tem:intB>?</tem:intB>\r
+      </tem:Divide>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://tempuri.org/Divide"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2d3d39e0-6199-40c2-bb09-480d305c54f9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Multiply TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="587e3815-a3d2-441e-abfe-42aaf69ece88" name="Multiply"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CalculatorSoap</con:interface><con:operation>Multiply</con:operation><con:request name="Multiply" id="9f67078b-803c-4530-810e-0a14bcac06b8"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.dneonline.com/calculator.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Multiply>\r
+         <tem:intA>?</tem:intA>\r
+         <tem:intB>?</tem:intB>\r
+      </tem:Multiply>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://tempuri.org/Multiply"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="856e0100-84d2-4d3f-b811-caf29e706bdd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Subtract TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="a4051681-eac5-4f5c-8650-fe9fed1f54f5" name="Subtract"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CalculatorSoap</con:interface><con:operation>Subtract</con:operation><con:request name="Subtract" id="17a98d44-68eb-4a99-946c-15805a6a4067"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.dneonline.com/calculator.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Subtract>\r
+         <tem:intA>?</tem:intA>\r
+         <tem:intB>?</tem:intB>\r
+      </tem:Subtract>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://tempuri.org/Subtract"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

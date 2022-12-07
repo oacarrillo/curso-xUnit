@@ -1,0 +1,146 @@
+{
+  "peliculas": [
+    {
+      "id": 1,
+      "nombre": "El sexto sentido",
+      "director": "M.Nigth Shyamalan",
+      "clasificacion": "Drama"
+    },
+    {
+      "id": 2,
+      "nombre": "Pulp Fiction",
+      "director": "Tarantino",
+      "clasificacion": "Acción"
+    },
+    {
+      "id": 3,
+      "nombre": "300",
+      "director": "Zack Snyder",
+      "clasificacion": "Acción"
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 4
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 5
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 6
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 7
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 8
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 9
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 10
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 11
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 12
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 13
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 14
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 15
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 16
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 17
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 18
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 19
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 20
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 21
+    },
+    {
+      "nombre": "la estrategia del caracol",
+      "director": "Sergio Cabrera",
+      "clasificacion": "Drama",
+      "id": 22
+    }
+  ],
+  "genero": [
+    {
+      "id": 1,
+      "nombre": "Drama"
+    },
+    {
+      "id": 2,
+      "nombre": "Accion"
+    }
+  ]
+}
